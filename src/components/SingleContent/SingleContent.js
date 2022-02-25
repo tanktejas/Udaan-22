@@ -10,7 +10,7 @@ const SingleContent = ({
   date,
   media_type,
   vote_average,
-}) => {
+}) => { 
   return (
     <ContentModal media_type={media_type} id={id}>
       <Badge

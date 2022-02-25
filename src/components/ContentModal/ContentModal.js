@@ -48,16 +48,16 @@ export default function TransitionsModal({ children, media_type, id }) {
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/${media_type}/${id}?api_key=2202298c737609e42a973f3742724ff2&language=en-US`
     );
-
+  
     setContent(data);
     // console.log(data);
   };
 
   const fetchVideo = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=2202298c737609e42a973f3742724ff2&language=en-US`
     );
 
     setVideo(data.results[0]?.key);
@@ -90,7 +90,7 @@ export default function TransitionsModal({ children, media_type, id }) {
         BackdropProps={{
           timeout: 500,
         }}
-      >
+      >  
         <Fade in={open}>
           {content && (
             <div className={classes.paper}>
@@ -128,7 +128,7 @@ export default function TransitionsModal({ children, media_type, id }) {
                   )}
 
                   <span className="ContentModal__description">
-                    {content.overview}
+                    {content.overview}  
                   </span>
 
                   <div>
